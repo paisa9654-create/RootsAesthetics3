@@ -1,0 +1,1092 @@
+<html lang="en-GB" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roots Aesthetics London - Expert Dermal Fillers by Dr. Anju Mehta. Restore volume, define contours, and achieve natural-looking results with hyaluronic acid fillers.">
+    <title>Roots Aesthetics | Dermal Fillers London | Natural Volume & Contouring</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconify Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            800: '#292524',
+                            900: '#1c1917',
+                        }
+                    },
+                    letterSpacing: {
+                        tighter: '-0.04em',
+                        tight: '-0.02em',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-feature-settings: "cv11", "ss01";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .map-grayscale {
+            filter: grayscale(100%) opacity(0.8);
+            transition: filter 0.3s ease;
+        }
+        .map-grayscale:hover {
+            filter: grayscale(0%) opacity(1);
+        }
+
+        /* Mobile nav dropdown animation */
+        .mobile-menu {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 320ms cubic-bezier(.2,.9,.2,1), opacity 240ms ease;
+        }
+        .mobile-menu.open {
+            max-height: 420px;
+            opacity: 1;
+        }
+
+        /* Before / After compare styles */
+        .compare-left {
+            width: 50%;
+            transition: width 240ms ease;
+            position: relative;
+            z-index: 1;
+        }
+        .compare-right {
+            flex: 1 1 0%;
+        }
+        .compare-handle {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            border-radius: 9999px;
+            background: #fff;
+            box-shadow: 0 6px 18px rgba(18, 18, 18, 0.12);
+            border: 2px solid rgba(0,0,0,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: ew-resize;
+            transition: left 120ms ease, opacity 160ms ease;
+            opacity: 0;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .compare-handle::after {
+            content: '';
+            width: 2px;
+            height: 14px;
+            background: #e5e7eb;
+            border-radius: 1px;
+        }
+        .group.is-comparing .compare-handle {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .group.is-comparing .tap-overlay {
+            opacity: 0 !important;
+            pointer-events: none;
+        }
+        .tap-overlay {
+            z-index: 2;
+            pointer-events: none;
+        }
+        .group:hover .tap-overlay,
+        .group:focus-within .tap-overlay {
+            pointer-events: auto;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fafaf9; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+
+        ::selection { background: #e7e5e4; color: #1c1917; }
+        
+        /* Custom styles for dermal fillers page */
+        .treatment-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .treatment-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .sticky-tabs {
+            position: sticky;
+            top: 80px;
+            z-index: 40;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans selection:bg-stone-200">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2 group">
+                <img src="../images/RootAesthetics.png" alt="Roots Aesthetics" width="100px">
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="results.html" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Results</a>
+                <a href="index.html#treatments" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Treatments</a>
+                <a href="index.html#about" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Dr. Mehta</a>
+                <a href="../blog/index.html" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Blog</a>
+                <a href="#booking" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="../book-Appointment/index.html" class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-stone-900 text-white text-xs font-medium rounded-full hover:bg-stone-800 hover:shadow-lg hover:shadow-stone-200/50 transition-all duration-300">
+                    Book Consultation
+                </a>
+                <button id="mobileMenuButton" aria-expanded="false" class="md:hidden p-2 text-stone-600 hover:bg-stone-100 rounded-lg transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6 menu-icon"></i>
+                    <i data-lucide="x" class="w-6 h-6 close-icon hidden"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu (hidden by default) -->
+        <div id="mobileMenu" class="mobile-menu md:hidden absolute left-0 right-0 top-full bg-white border-t border-stone-100 shadow-lg z-50">
+            <div class="px-6 py-4 flex flex-col gap-3">
+                <a href="results.html" class="text-sm font-medium text-stone-700 hover:text-stone-900">Results</a>
+                <a href="index.html#treatments" class="text-sm font-medium text-stone-700 hover:text-stone-900">Treatments</a>
+                <a href="index.html#about" class="text-sm font-medium text-stone-700 hover:text-stone-900">Dr. Mehta</a>
+                <a href="../blog/index.html" class="text-sm font-medium text-stone-700 hover:text-stone-900">Blog</a>
+                <a href="#booking" class="text-sm font-medium text-stone-700 hover:text-stone-900">Contact</a>
+                <a href="../book-Appointment/index.html" class="mt-2 inline-flex items-center justify-center px-4 py-2 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800">Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="pt-40 pb-16 md:pt-48 md:pb-24 px-6 bg-gradient-to-b from-white to-stone-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-stone-200 bg-white/50 mb-8">
+                <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                <span class="text-xs font-medium text-stone-500 tracking-wide uppercase">Medical Grade Hyaluronic Acid Fillers</span>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-7xl font-medium tracking-tighter text-stone-900 leading-tight mb-8">
+                        Dermal <br>
+                        <span class="text-stone-400">Fillers</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-stone-500 mb-10 leading-relaxed font-light">
+                        Restore lost volume, define contours, and achieve natural-looking results with our premium hyaluronic acid fillers. Expertly administered by Dr. Anju Mehta for subtle, transformative outcomes.
+                    </p>
+                    
+                    <div class="flex flex-col md:flex-row items-center gap-4">
+                        <a href="../book-Appointment/index.html" class="w-full md:w-auto px-8 py-3.5 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800 transition-all duration-300 flex items-center justify-center gap-2">
+                            Book Filler Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#results" class="w-full md:w-auto px-8 py-3.5 bg-white border border-stone-200 text-stone-700 text-sm font-medium rounded-full hover:bg-stone-50 transition-all duration-300">
+                            View Results
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-stone-200 to-stone-100 border border-stone-100 shadow-lg relative">
+                        <div class="absolute inset-0 flex items-center justify-center p-8">
+                            <div class="text-center">
+                                <i data-lucide="feather" class="w-16 h-16 text-stone-700 mb-6 mx-auto opacity-20"></i>
+                                <h3 class="text-xl font-medium text-stone-900 mb-4">Natural Volume Restoration</h3>
+                                <p class="text-sm text-stone-500">Subtle enhancement that respects your natural anatomy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Navigation Tabs -->
+    <div class="sticky-tabs border-b border-stone-200 bg-white/95 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex overflow-x-auto gap-2 py-4">
+                <a href="#what-are-fillers" class="flex-shrink-0 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">What Are Fillers?</a>
+                <a href="#areas" class="flex-shrink-0 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Areas We Treat</a>
+                <a href="#procedure" class="flex-shrink-0 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">The Procedure</a>
+                <a href="#results" class="flex-shrink-0 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Results</a>
+                <a href="#pricing" class="flex-shrink-0 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Pricing</a>
+                <a href="#faq" class="flex-shrink-0 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">FAQ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- What Are Dermal Fillers -->
+    <section id="what-are-fillers" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-6">What Are Dermal Fillers?</h2>
+                    <div class="space-y-4 text-stone-600 leading-relaxed">
+                        <p>
+                            Dermal fillers are injectable gels made from hyaluronic acid—a substance naturally found in your skin that helps maintain volume and hydration. As we age, our natural hyaluronic acid levels decrease, leading to volume loss, wrinkles, and sagging skin.
+                        </p>
+                        <p>
+                            Our premium fillers are designed to:
+                        </p>
+                        <ul class="space-y-3 mt-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-stone-400 shrink-0 mt-0.5"></i>
+                                <span>Restore lost volume in cheeks, temples, and lips</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-stone-400 shrink-0 mt-0.5"></i>
+                                <span>Smooth deep lines and wrinkles</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-stone-400 shrink-0 mt-0.5"></i>
+                                <span>Define and contour facial features</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-stone-400 shrink-0 mt-0.5"></i>
+                                <span>Improve skin hydration and elasticity</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-stone-50 rounded-2xl p-8 border border-stone-100">
+                    <h3 class="text-xl font-medium text-stone-900 mb-6 flex items-center gap-2">
+                        <i data-lucide="shield" class="w-5 h-5 text-stone-600"></i>
+                        Why Choose Our Fillers?
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center shrink-0">
+                                <i data-lucide="star" class="w-5 h-5 text-stone-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-stone-900">Premium Brands</h4>
+                                <p class="text-sm text-stone-500">We use only FDA-approved, top-tier hyaluronic acid fillers from reputable manufacturers.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center shrink-0">
+                                <i data-lucide="user-check" class="w-5 h-5 text-stone-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-stone-900">Medical Expertise</h4>
+                                <p class="text-sm text-stone-500">Dr. Mehta's medical background ensures precise anatomical placement and natural results.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center shrink-0">
+                                <i data-lucide="zap" class="w-5 h-5 text-stone-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-stone-900">Reversible Results</h4>
+                                <p class="text-sm text-stone-500">Hyaluronic acid fillers can be dissolved if needed, offering peace of mind.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas We Treat -->
+    <section id="areas" class="py-24 bg-stone-50 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-4">Areas We Treat</h2>
+                <p class="text-stone-500 font-light text-lg max-w-2xl mx-auto">Comprehensive facial rejuvenation through targeted volume restoration.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Lip Enhancement -->
+                <div class="treatment-card bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="w-12 h-12 bg-stone-50 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="heart" class="w-6 h-6 text-stone-700"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-stone-900 mb-3">Lip Enhancement</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-6">
+                        Subtle volume enhancement and border definition for natural-looking lips that maintain proportion and expression.
+                    </p>
+                    <ul class="space-y-2 text-sm text-stone-600">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Volume: 0.5ml - 1ml</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Duration: 9-12 months</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Subtle definition</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cheek Contouring -->
+                <div class="treatment-card bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="w-12 h-12 bg-stone-50 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="sparkle" class="w-6 h-6 text-stone-700"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-stone-900 mb-3">Cheek Contouring</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-6">
+                        Restore youthful cheek volume and enhance cheekbone definition for a lifted, structured appearance.
+                    </p>
+                    <ul class="space-y-2 text-sm text-stone-600">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Volume: 1ml - 2ml</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Duration: 12-18 months</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Mid-face lift effect</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Jawline Definition -->
+                <div class="treatment-card bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="w-12 h-12 bg-stone-50 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="diamond" class="w-6 h-6 text-stone-700"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-stone-900 mb-3">Jawline Definition</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-6">
+                        Create a sharper, more defined jawline and improve lower facial contour for a balanced profile.
+                    </p>
+                    <ul class="space-y-2 text-sm text-stone-600">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Volume: 1.5ml - 3ml</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Duration: 18-24 months</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Structural support</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tear Trough -->
+                <div class="treatment-card bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="w-12 h-12 bg-stone-50 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="eye" class="w-6 h-6 text-stone-700"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-stone-900 mb-3">Tear Trough</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-6">
+                        Smooth under-eye hollows and dark circles for a refreshed, well-rested appearance.
+                    </p>
+                    <ul class="space-y-2 text-sm text-stone-600">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Volume: 0.5ml - 1ml</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Duration: 9-12 months</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Delicate area expertise</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Marionette Lines -->
+                <div class="treatment-card bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="w-12 h-12 bg-stone-50 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="smile" class="w-6 h-6 text-stone-700"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-stone-900 mb-3">Marionette Lines</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-6">
+                        Soften lines from nose to mouth and mouth to chin for a more youthful, uplifted smile.
+                    </p>
+                    <ul class="space-y-2 text-sm text-stone-600">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Volume: 0.5ml - 1ml</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Duration: 9-12 months</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Uplifts mouth corners</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Non-Surgical Rhinoplasty -->
+                <div class="treatment-card bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="w-12 h-12 bg-stone-50 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="mountain" class="w-6 h-6 text-stone-700"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-stone-900 mb-3">Non-Surgical Nose</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed mb-6">
+                        Correct dorsal humps, improve symmetry, and refine nasal contours without surgery.
+                    </p>
+                    <ul class="space-y-2 text-sm text-stone-600">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Volume: 0.5ml - 1ml</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Duration: 12-18 months</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Immediate correction</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Procedure -->
+    <section id="procedure" class="py-24 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-4">The Procedure</h2>
+                <p class="text-stone-500 font-light text-lg max-w-2xl mx-auto">A comfortable, efficient process from consultation to results.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-stone-900 text-white flex items-center justify-center text-xl font-medium mb-6 mx-auto">1</div>
+                    <h3 class="text-lg font-medium text-stone-900 mb-3">Consultation</h3>
+                    <p class="text-sm text-stone-500">
+                        Comprehensive facial assessment and goal discussion with Dr. Mehta. We plan your treatment together.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-stone-900 text-white flex items-center justify-center text-xl font-medium mb-6 mx-auto">2</div>
+                    <h3 class="text-lg font-medium text-stone-900 mb-3">Preparation</h3>
+                    <p class="text-sm text-stone-500">
+                        Topical numbing cream applied for 20-30 minutes to ensure maximum comfort during treatment.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-stone-900 text-white flex items-center justify-center text-xl font-medium mb-6 mx-auto">3</div>
+                    <h3 class="text-lg font-medium text-stone-900 mb-3">Treatment</h3>
+                    <p class="text-sm text-stone-500">
+                        Precise injection by Dr. Mehta using fine needles or cannulas. Typically 15-30 minutes depending on areas.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-stone-900 text-white flex items-center justify-center text-xl font-medium mb-6 mx-auto">4</div>
+                    <h3 class="text-lg font-medium text-stone-900 mb-3">Aftercare</h3>
+                    <p class="text-sm text-stone-500">
+                        Immediate results with some swelling. Full results visible in 1-2 weeks. Minimal downtime required.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-stone-50 rounded-2xl p-8 border border-stone-100">
+                <h3 class="text-xl font-medium text-stone-900 mb-6">What to Expect After Treatment</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-white border border-stone-200 flex items-center justify-center mb-4 mx-auto">
+                            <i data-lucide="clock" class="w-5 h-5 text-stone-600"></i>
+                        </div>
+                        <h4 class="font-medium text-stone-900 mb-2">Immediate</h4>
+                        <p class="text-xs text-stone-500">Visible improvement with some swelling</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-white border border-stone-200 flex items-center justify-center mb-4 mx-auto">
+                            <i data-lucide="sun" class="w-5 h-5 text-stone-600"></i>
+                        </div>
+                        <h4 class="font-medium text-stone-900 mb-2">24-48 Hours</h4>
+                        <p class="text-xs text-stone-500">Minor swelling resolves, avoid strenuous exercise</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-white border border-stone-200 flex items-center justify-center mb-4 mx-auto">
+                            <i data-lucide="calendar" class="w-5 h-5 text-stone-600"></i>
+                        </div>
+                        <h4 class="font-medium text-stone-900 mb-2">1-2 Weeks</h4>
+                        <p class="text-xs text-stone-500">Full, natural-looking results visible</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-white border border-stone-200 flex items-center justify-center mb-4 mx-auto">
+                            <i data-lucide="refresh-ccw" class="w-5 h-5 text-stone-600"></i>
+                        </div>
+                        <h4 class="font-medium text-stone-900 mb-2">Maintenance</h4>
+                        <p class="text-xs text-stone-500">Results last 9-24 months depending on area</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Gallery -->
+    <section id="results" class="py-24 bg-stone-50 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-4">Filler Results</h2>
+                    <p class="text-stone-500 font-light text-lg">Real patient transformations with hyaluronic acid fillers.</p>
+                </div>
+                <a href="results.html" class="text-sm font-medium text-stone-900 border-b border-stone-200 hover:border-stone-900 pb-0.5 transition-all">View Full Gallery</a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Result 1 -->
+                <div class="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-sm">
+                    <div class="relative aspect-[16/9] bg-stone-100 overflow-hidden">
+                        <div class="absolute inset-0 flex">
+                            <div class="compare-left h-full bg-gradient-to-br from-stone-300 to-stone-200 relative border-r border-white">
+                                <span class="absolute top-4 left-4 text-[10px] font-bold tracking-widest uppercase text-stone-500 bg-white/80 px-2 py-1 rounded-md backdrop-blur-sm">Before</span>
+                            </div>
+                            <div class="compare-right h-full bg-gradient-to-br from-stone-100 to-stone-50 relative">
+                                <span class="absolute top-4 right-4 text-[10px] font-bold tracking-widest uppercase text-stone-900 bg-white/80 px-2 py-1 rounded-md backdrop-blur-sm">After</span>
+                            </div>
+                        </div>
+                        <div class="tap-overlay absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-white/90 backdrop-blur px-4 py-2 rounded-full text-xs font-medium shadow-sm">Tap to compare</div>
+                        </div>
+                        <div class="compare-handle"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-medium text-stone-900">Lip Enhancement & Definition</h3>
+                        <p class="text-sm text-stone-500 mt-1">0.8ml filler for natural volume and border definition</p>
+                    </div>
+                </div>
+
+                <!-- Result 2 -->
+                <div class="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-sm">
+                    <div class="relative aspect-[16/9] bg-stone-100 overflow-hidden">
+                        <div class="absolute inset-0 flex">
+                            <div class="compare-left h-full bg-gradient-to-br from-stone-300 to-stone-200 relative border-r border-white">
+                                <span class="absolute top-4 left-4 text-[10px] font-bold tracking-widest uppercase text-stone-500 bg-white/80 px-2 py-1 rounded-md backdrop-blur-sm">Before</span>
+                            </div>
+                            <div class="compare-right h-full bg-gradient-to-br from-stone-100 to-stone-50 relative">
+                                <span class="absolute top-4 right-4 text-[10px] font-bold tracking-widest uppercase text-stone-900 bg-white/80 px-2 py-1 rounded-md backdrop-blur-sm">After</span>
+                            </div>
+                        </div>
+                        <div class="tap-overlay absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-white/90 backdrop-blur px-4 py-2 rounded-full text-xs font-medium shadow-sm">Tap to compare</div>
+                        </div>
+                        <div class="compare-handle"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-medium text-stone-900">Cheek Contouring</h3>
+                        <p class="text-sm text-stone-500 mt-1">1.5ml for restored volume and enhanced cheekbones</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-24 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-4">Transparent Pricing</h2>
+                <p class="text-stone-500 font-light text-lg max-w-2xl mx-auto">Invest in quality treatments with clear, upfront pricing.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Single Area -->
+                <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+                    <h3 class="text-xl font-medium text-stone-900 mb-3">Single Area</h3>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-3xl font-medium text-stone-900">£250</span>
+                        <span class="text-stone-500">from</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-sm text-stone-600">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>0.5ml filler (lips or tear troughs)</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-stone-600">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>30-minute appointment</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-stone-600">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Follow-up included</span>
+                        </li>
+                    </ul>
+                    <a href="../book-Appointment/index.html" class="w-full inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800 transition-all duration-300">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Two Areas -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-stone-900 shadow-lg relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                        <span class="px-3 py-1 bg-stone-900 text-white text-xs font-medium rounded-full">Most Popular</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-stone-900 mb-3">Two Areas</h3>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-3xl font-medium text-stone-900">£450</span>
+                        <span class="text-stone-500">from</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-sm text-stone-600">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>1ml total filler (cheeks or jawline)</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-stone-600">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>45-minute appointment</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-stone-600">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Follow-up + top-up if needed</span>
+                        </li>
+                    </ul>
+                    <a href="../book-Appointment/index.html" class="w-full inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800 transition-all duration-300">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Comprehensive -->
+                <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+                    <h3 class="text-xl font-medium text-stone-900 mb-3">Full Face</h3>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-3xl font-medium text-stone-900">£650</span>
+                        <span class="text-stone-500">from</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-sm text-stone-600">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>2ml+ comprehensive treatment</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-stone-600">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>60-minute detailed session</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-stone-600">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-400"></i>
+                            <span>Personalised treatment plan</span>
+                        </li>
+                    </ul>
+                    <a href="../book-Appointment/index.html" class="w-full inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800 transition-all duration-300">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-sm text-stone-500">All treatments include consultation, numbing cream, and follow-up. <br>Prices vary based on filler volume and areas treated.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-stone-50 border-t border-stone-200">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-stone-500 font-light text-lg">Everything you need to know about dermal fillers.</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-stone-100">
+                    <button class="flex items-center justify-between w-full text-left group" onclick="toggleFAQ(1)">
+                        <h3 class="text-lg font-medium text-stone-900">Are dermal fillers safe?</h3>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 transition-transform group-[.open]:rotate-180"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-stone-600">
+                            Yes, when administered by a qualified medical professional like Dr. Mehta. We use only FDA-approved hyaluronic acid fillers, which are biocompatible and reversible. The risk of complications is minimal with proper technique and anatomical knowledge.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-stone-100">
+                    <button class="flex items-center justify-between w-full text-left group" onclick="toggleFAQ(2)">
+                        <h3 class="text-lg font-medium text-stone-900">How long do results last?</h3>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 transition-transform group-[.open]:rotate-180"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-stone-600">
+                            Dermal filler results typically last 9-24 months, depending on the area treated, the type of filler used, and your individual metabolism. Lips generally last 9-12 months, while cheek and jawline fillers can last 18-24 months. Maintenance treatments can prolong results.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-stone-100">
+                    <button class="flex items-center justify-between w-full text-left group" onclick="toggleFAQ(3)">
+                        <h3 class="text-lg font-medium text-stone-900">Is there any downtime?</h3>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 transition-transform group-[.open]:rotate-180"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-stone-600">
+                            Minimal. You may experience some swelling, redness, or bruising for 24-48 hours. Most clients return to normal activities immediately, though we recommend avoiding strenuous exercise, alcohol, and excessive sun exposure for 24-48 hours. Makeup can be applied the next day.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-stone-100">
+                    <button class="flex items-center justify-between w-full text-left group" onclick="toggleFAQ(4)">
+                        <h3 class="text-lg font-medium text-stone-900">Can fillers be dissolved if I don't like them?</h3>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 transition-transform group-[.open]:rotate-180"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-stone-600">
+                            Yes, hyaluronic acid fillers can be dissolved with an enzyme called hyaluronidase. This is one of their key advantages over permanent fillers. However, this is rarely necessary with Dr. Mehta's conservative, natural approach. We always start with less product and can add more if needed.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white p-6 rounded-2xl border border-stone-100">
+                    <button class="flex items-center justify-between w-full text-left group" onclick="toggleFAQ(5)">
+                        <h3 class="text-lg font-medium text-stone-900">How soon will I see results?</h3>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 transition-transform group-[.open]:rotate-180"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-stone-600">
+                            You'll see immediate improvement, though there may be some initial swelling. The final, settled results are visible within 1-2 weeks once any swelling has subsided and the filler has integrated with your tissues. We schedule a follow-up appointment at 2 weeks to assess the final results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="booking" class="py-24 bg-white border-t border-stone-200">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-6">Ready for Natural Volume Restoration?</h2>
+            <p class="text-lg text-stone-500 mb-10 leading-relaxed font-light max-w-2xl mx-auto">
+                Schedule a consultation with Dr. Mehta to discuss your facial rejuvenation goals and create a personalised filler treatment plan.
+            </p>
+            <a href="../book-Appointment/index.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800 transition-all duration-300 shadow-lg shadow-stone-200">
+                Book Your Filler Consultation
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <p class="text-sm text-stone-400 mt-6">
+                Consultation fee: £50 (deductible from treatment)
+            </p>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <a id="floatingCTA" href="../book-Appointment/index.html" aria-label="Book Filler Appointment"
+       class="fixed bottom-6 right-6 z-50 px-5 py-3 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800 transition-all duration-300 shadow-xl flex items-center justify-center gap-2">
+       <i data-lucide="message-circle" class="w-4 h-4"></i>
+       Book Filler Consultation
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-stone-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="col-span-2 md:col-span-1">
+                     <a href="index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2 mb-6">
+                        <span class="w-6 h-6 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-stone-900">
+                            <span class="font-medium text-[10px]">R</span>
+                        </span>
+                        RootsAesthetics
+                    </a>
+                    <p class="text-xs text-stone-500 leading-relaxed max-w-xs">
+                        Refining beauty through medical excellence. London based aesthetic clinic led by Dr. Anju Mehta.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Treatments</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="index.html#treatments" class="hover:text-stone-900 transition-colors">Anti-Wrinkle</a></li>
+                        <li><a href="dermal-fillers.html" class="hover:text-stone-900 transition-colors">Dermal Fillers</a></li>
+                        <li><a href="index.html#treatments" class="hover:text-stone-900 transition-colors">Skin Boosters</a></li>
+                        <li><a href="index.html#treatments" class="hover:text-stone-900 transition-colors">Microneedling</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Clinic</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="index.html#about" class="hover:text-stone-900 transition-colors">About Dr. Mehta</a></li>
+                        <li><a href="../blog/index.html" class="hover:text-stone-900 transition-colors">Blog</a></li>
+                        <li><a href="results.html" class="hover:text-stone-900 transition-colors">Results Gallery</a></li>
+                        <li><a href="../book-Appointment/index.html" class="hover:text-stone-900 transition-colors">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Connect</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="#" class="hover:text-stone-900 transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-stone-900 transition-colors">LinkedIn</a></li>
+                        <li><a href="mailto:info@RootsAesthetics.co.uk" class="hover:text-stone-900 transition-colors">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-stone-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-stone-400">
+                    © 2023 Roots Aesthetics Ltd. All rights reserved. London, UK.
+                </p>
+                <div class="flex items-center gap-4">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-stone-300"></i>
+                    <span class="text-xs text-stone-400">GMC Registered Doctor</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile Menu Functionality
+        (function initMobileMenu() {
+            const btn = document.getElementById('mobileMenuButton');
+            const menu = document.getElementById('mobileMenu');
+            if (!btn || !menu) return;
+
+            const icons = Array.from(btn.querySelectorAll('svg, i'));
+            const [menuIcon, closeIcon] = icons;
+
+            btn.addEventListener('click', () => {
+                const isOpen = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('open');
+
+                if (menuIcon && closeIcon) {
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                }
+            });
+        })();
+        
+        // Before/After Comparison Functionality
+        (function initBeforeAfter() {
+            const groups = Array.from(document.querySelectorAll('.group.cursor-pointer'));
+            groups.forEach(group => {
+                const flexContainer = group.querySelector('.relative > .absolute.inset-0.flex');
+                if (!flexContainer) return;
+
+                const panes = Array.from(flexContainer.children).filter(c => c.tagName.toLowerCase() === 'div');
+                if (panes.length < 2) return;
+                const left = panes[0];
+                const right = panes[1];
+
+                left.classList.add('compare-left');
+                right.classList.add('compare-right');
+
+                const overlay = group.querySelector('.absolute.inset-0.flex.items-center.justify-center') || 
+                               group.querySelector('.absolute.inset-0.flex.items-center.justify-center.opacity-0');
+                if (overlay) overlay.classList.add('tap-overlay');
+
+                const handle = document.createElement('div');
+                handle.className = 'compare-handle';
+                flexContainer.appendChild(handle);
+
+                let containerRect = null;
+                
+                function updateHandlePosition(clientX) {
+                    if (!containerRect) containerRect = flexContainer.getBoundingClientRect();
+                    const x = Math.min(Math.max(clientX - containerRect.left, 0), containerRect.width);
+                    const pct = (x / containerRect.width) * 100;
+                    left.style.width = `${pct}%`;
+                    handle.style.left = `calc(${pct}% - 14px)`;
+                }
+
+                function initCenter() {
+                    left.style.width = '50%';
+                    handle.style.left = 'calc(50% - 14px)';
+                }
+                initCenter();
+
+                let dragging = false;
+                group.addEventListener('click', (e) => {
+                    if (dragging) return;
+                    if (e.target.closest('a')) return;
+                    group.classList.toggle('is-comparing');
+                    initCenter();
+                });
+
+                handle.addEventListener('pointerdown', (e) => {
+                    e.preventDefault();
+                    dragging = false;
+                    containerRect = flexContainer.getBoundingClientRect();
+                    handle.setPointerCapture(e.pointerId);
+                    const startX = e.clientX;
+                    
+                    const onMove = (ev) => {
+                        dragging = true;
+                        updateHandlePosition(ev.clientX);
+                    };
+                    
+                    const onUp = (ev) => {
+                        handle.releasePointerCapture && handle.releasePointerCapture(ev.pointerId);
+                        window.removeEventListener('pointermove', onMove);
+                        window.removeEventListener('pointerup', onUp);
+                        setTimeout(() => { dragging = false; }, 0);
+                    };
+                    
+                    window.addEventListener('pointermove', onMove);
+                    window.addEventListener('pointerup', onUp);
+                    group.classList.add('is-comparing');
+                });
+
+                window.addEventListener('resize', () => { 
+                    containerRect = null; 
+                    initCenter(); 
+                });
+            });
+        })();
+        
+        // FAQ Toggle Functionality
+        function toggleFAQ(number) {
+            const button = event.currentTarget;
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            button.classList.toggle('open');
+            content.classList.toggle('hidden');
+            
+            // Refresh icon rotation
+            lucide.createIcons();
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Sticky tabs highlight on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPosition = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.sticky-tabs a').forEach(link => {
+                        link.classList.remove('text-stone-900', 'font-semibold');
+                        link.classList.add('text-stone-600');
+                        
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.remove('text-stone-600');
+                            link.classList.add('text-stone-900', 'font-semibold');
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Simple intersection observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach((el) => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+
+</body></html>

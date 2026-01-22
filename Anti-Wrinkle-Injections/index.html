@@ -1,0 +1,782 @@
+<html lang="en-GB" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roots Aesthetics London - Anti-Wrinkle Injections with Dr. Anju Mehta. Medical-grade neuromodulators for natural-looking wrinkle reduction.">
+    <title>Anti-Wrinkle Injections | Roots Aesthetics | Dr. Anju Mehta | London Clinic</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconify Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            800: '#292524',
+                            900: '#1c1917',
+                        }
+                    },
+                    letterSpacing: {
+                        tighter: '-0.04em',
+                        tight: '-0.02em',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-feature-settings: "cv11", "ss01";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .map-grayscale {
+            filter: grayscale(100%) opacity(0.8);
+            transition: filter 0.3s ease;
+        }
+        .map-grayscale:hover {
+            filter: grayscale(0%) opacity(1);
+        }
+
+        /* Mobile nav dropdown animation */
+        .mobile-menu {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 320ms cubic-bezier(.2,.9,.2,1), opacity 240ms ease;
+        }
+        .mobile-menu.open {
+            max-height: 420px; /* large enough for menu content */
+            opacity: 1;
+        }
+
+        /* Before / After compare styles */
+        .compare-left {
+            width: 50%;
+            transition: width 240ms ease;
+            position: relative;
+            z-index: 1;
+        }
+        .compare-right {
+            flex: 1 1 0%;
+        }
+        .compare-handle {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            border-radius: 9999px;
+            background: #fff;
+            box-shadow: 0 6px 18px rgba(18, 18, 18, 0.12);
+            border: 2px solid rgba(0,0,0,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: ew-resize;
+            transition: left 120ms ease, opacity 160ms ease;
+            opacity: 0;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .compare-handle::after {
+            content: '';
+            width: 2px;
+            height: 14px;
+            background: #e5e7eb;
+            border-radius: 1px;
+        }
+        /* enable when comparing */
+        .group.is-comparing .compare-handle {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        /* hide the hover "Tap to compare" overlay while comparing */
+        .group.is-comparing .tap-overlay {
+            opacity: 0 !important;
+            pointer-events: none;
+        }
+
+        /* Fix: ensure "Tap to compare" overlay sits above the left pane (compare-left)
+           but below the handle so it is fully visible and interactive on hover. */
+        .tap-overlay {
+            z-index: 2;              /* above .compare-left (z-index:1) */
+            pointer-events: none;    /* default non-interactive until hover */
+        }
+        .group:hover .tap-overlay,
+        .group:focus-within .tap-overlay {
+            pointer-events: auto;    /* allow hover/focus interactions when visible */
+        }
+
+        /* Treatment-specific styles */
+        .treatment-hero {
+            background: linear-gradient(135deg, #fafaf9 0%, #f5f5f4 100%);
+        }
+        
+        .benefit-card {
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .treatment-step {
+            counter-increment: step;
+            position: relative;
+        }
+        
+        .treatment-step::before {
+            content: counter(step);
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: #1c1917;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fafaf9; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+
+        ::selection { background: #e7e5e4; color: #1c1917; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans selection:bg-stone-200">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2 group">
+                <img src="../images/RootAesthetics.png" alt="Roots Aesthetics" width="100px">
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="results.html" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Results</a>
+                <a href="index.html#treatments" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Treatments</a>
+                <a href="index.html#about" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Dr. Mehta</a>
+                <a href="../blog/index.html" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Blog</a>
+                <a href="../index.html#booking" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="../book-Appointment/index.html" class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-stone-900 text-white text-xs font-medium rounded-full hover:bg-stone-800 hover:shadow-lg hover:shadow-stone-200/50 transition-all duration-300">
+                    Book Consultation
+                </a>
+                <button id="mobileMenuButton" aria-expanded="false" class="md:hidden p-2 text-stone-600 hover:bg-stone-100 rounded-lg transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6 menu-icon"></i>
+                    <i data-lucide="x" class="w-6 h-6 close-icon hidden"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu (hidden by default) -->
+        <div id="mobileMenu" class="mobile-menu md:hidden absolute left-0 right-0 top-full bg-white border-t border-stone-100 shadow-lg z-50">
+            <div class="px-6 py-4 flex flex-col gap-3">
+                <a href="results.html" class="text-sm font-medium text-stone-700 hover:text-stone-900">Results</a>
+                <a href="index.html#treatments" class="text-sm font-medium text-stone-700 hover:text-stone-900">Treatments</a>
+                <a href="index.html#about" class="text-sm font-medium text-stone-700 hover:text-stone-900">Dr. Mehta</a>
+                <a href="../blog/index.html" class="text-sm font-medium text-stone-700 hover:text-stone-900">Blog</a>
+                <a href="#booking" class="text-sm font-medium text-stone-700 hover:text-stone-900">Contact</a>
+                <a href="../book-Appointment/index.html" class="mt-2 inline-flex items-center justify-center px-4 py-2 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800">Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Treatment Hero -->
+    <header class="pt-40 pb-24 md:pt-48 md:pb-32 px-6 treatment-hero">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-stone-500 text-xs font-medium uppercase tracking-widest mb-4">
+                        <i data-lucide="syringe" class="w-4 h-4"></i> Medical Aesthetics
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-medium tracking-tighter text-stone-900 leading-tight mb-6">
+                        Anti-Wrinkle<br>
+                        <span class="text-stone-400">Injections</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-stone-500 mb-8 leading-relaxed font-light">
+                        Medical-grade neuromodulators to relax expression lines while preserving natural movement. Refine your appearance without looking "frozen".
+                    </p>
+                    
+                    <div class="flex flex-col md:flex-row items-center gap-4">
+                        <a href="../book-Appointment/index.html" class="w-full md:w-auto px-8 py-3.5 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800 transition-all duration-300 flex items-center justify-center gap-2">
+                            Book Treatment <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#pricing" class="w-full md:w-auto px-8 py-3.5 bg-white border border-stone-200 text-stone-700 text-sm font-medium rounded-full hover:bg-stone-50 transition-all duration-300">
+                            View Pricing
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 flex flex-wrap gap-6 text-sm text-stone-500">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-4 h-4"></i>
+                            <span>15-30 minute treatment</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="zap" class="w-4 h-4"></i>
+                            <span>Results in 3-7 days</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            <span>Lasts 3-4 months</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Before/After Preview -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-stone-100 shadow-lg">
+                    <div class="relative aspect-[4/3] bg-stone-100 overflow-hidden cursor-pointer group">
+                        <div class="absolute inset-0 flex">
+                            <div class="compare-left h-full bg-gradient-to-br from-stone-300 to-stone-200 relative border-r border-white">
+                                <span class="absolute top-4 left-4 text-[10px] font-bold tracking-widest uppercase text-stone-500 bg-white/80 px-2 py-1 rounded-md backdrop-blur-sm">Before</span>
+                            </div>
+                            <div class="compare-right h-full bg-gradient-to-br from-stone-100 to-stone-50 relative">
+                                <span class="absolute top-4 right-4 text-[10px] font-bold tracking-widest uppercase text-stone-900 bg-white/80 px-2 py-1 rounded-md backdrop-blur-sm">After</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tap-overlay absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-white/90 backdrop-blur px-4 py-2 rounded-full text-xs font-medium shadow-sm">Tap to compare</div>
+                        </div>
+                        
+                        <div class="compare-handle"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-medium text-stone-900 mb-2">Forehead & Glabella Treatment</h3>
+                        <p class="text-sm text-stone-500">Smoothing of dynamic wrinkles while maintaining natural expression</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- What Are Anti-Wrinkle Injections -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-6">Medical-Grade Precision</h2>
+                    <p class="text-lg text-stone-500 mb-6 leading-relaxed">
+                        Anti-wrinkle injections use purified neuromodulators to temporarily relax targeted facial muscles. This reduces the appearance of dynamic wrinkles caused by repetitive facial expressions.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-stone-900 mt-0.5 shrink-0"></i>
+                            <div>
+                                <h4 class="font-medium text-stone-900 mb-1">FDA-Approved Formula</h4>
+                                <p class="text-sm text-stone-500">Medical-grade, purified neuromodulators for safety and efficacy</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-stone-900 mt-0.5 shrink-0"></i>
+                            <div>
+                                <h4 class="font-medium text-stone-900 mb-1">Precision Targeting</h4>
+                                <p class="text-sm text-stone-500">Dr. Mehta's anatomical expertise ensures precise muscle targeting</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-stone-900 mt-0.5 shrink-0"></i>
+                            <div>
+                                <h4 class="font-medium text-stone-900 mb-1">Natural Results</h4>
+                                <p class="text-sm text-stone-500">Maintains facial expressiveness while softening lines</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-stone-50 rounded-2xl p-8 border border-stone-100">
+                    <h3 class="text-xl font-medium text-stone-900 mb-6">Common Treatment Areas</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-xl border border-stone-100">
+                            <div class="w-10 h-10 bg-stone-100 rounded-lg flex items-center justify-center mb-3">
+                                <i data-lucide="eye" class="w-5 h-5 text-stone-700"></i>
+                            </div>
+                            <h4 class="font-medium text-stone-900 text-sm">Crow's Feet</h4>
+                            <p class="text-xs text-stone-500 mt-1">Lateral eye wrinkles</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-stone-100">
+                            <div class="w-10 h-10 bg-stone-100 rounded-lg flex items-center justify-center mb-3">
+                                <i data-lucide="minus" class="w-5 h-5 text-stone-700"></i>
+                            </div>
+                            <h4 class="font-medium text-stone-900 text-sm">Forehead Lines</h4>
+                            <p class="text-xs text-stone-500 mt-1">Horizontal expression lines</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-stone-100">
+                            <div class="w-10 h-10 bg-stone-100 rounded-lg flex items-center justify-center mb-3">
+                                <i data-lucide="frown" class="w-5 h-5 text-stone-700"></i>
+                            </div>
+                            <h4 class="font-medium text-stone-900 text-sm">Frown Lines</h4>
+                            <p class="text-xs text-stone-500 mt-1">Glabellar "11" lines</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-stone-100">
+                            <div class="w-10 h-10 bg-stone-100 rounded-lg flex items-center justify-center mb-3">
+                                <i data-lucide="smile" class="w-5 h-5 text-stone-700"></i>
+                            </div>
+                            <h4 class="font-medium text-stone-900 text-sm">Bunny Lines</h4>
+                            <p class="text-xs text-stone-500 mt-1">Nasal scrunch lines</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-white border-t border-stone-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-4">Treatment Pricing</h2>
+                <p class="text-stone-500 font-light text-lg max-w-2xl mx-auto">Transparent pricing for all treatment areas. Consultation fee (£50) redeemable against treatment.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Single Area -->
+                <div class="bg-white rounded-2xl p-8 border-2 border-stone-100 hover:border-stone-900 transition-all duration-300">
+                    <div class="text-center mb-8">
+                        <h3 class="text-xl font-medium text-stone-900 mb-2">Single Area</h3>
+                        <div class="flex items-baseline justify-center gap-1">
+                            <span class="text-4xl font-medium tracking-tight text-stone-900">£195</span>
+                        </div>
+                        <p class="text-sm text-stone-500 mt-2">Ideal for targeted correction</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-900 shrink-0"></i>
+                            <span>One treatment area (forehead, frown, or eyes)</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-900 shrink-0"></i>
+                            <span>Personalised dosage</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-900 shrink-0"></i>
+                            <span>Follow-up assessment included</span>
+                        </li>
+                    </ul>
+                    <a href="../book-Appointment/index.html" class="block w-full text-center px-6 py-3 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800 transition-all duration-300">
+                        Book Single Area
+                    </a>
+                </div>
+                
+                <!-- Three Areas (Most Popular) -->
+                <div class="bg-white rounded-2xl p-8 border-2 border-stone-900 relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                        <span class="px-4 py-1 bg-stone-900 text-white text-xs font-medium rounded-full">Most Popular</span>
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-xl font-medium text-stone-900 mb-2">Three Areas</h3>
+                        <div class="flex items-baseline justify-center gap-1">
+                            <span class="text-4xl font-medium tracking-tight text-stone-900">£295</span>
+                        </div>
+                        <p class="text-sm text-stone-500 mt-2">Complete upper face rejuvenation</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-900 shrink-0"></i>
+                            <span>Forehead, frown lines, and crow's feet</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-900 shrink-0"></i>
+                            <span>Balanced, harmonious results</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-900 shrink-0"></i>
+                            <span>Most comprehensive wrinkle reduction</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-900 shrink-0"></i>
+                            <span>Save £90 compared to separate areas</span>
+                        </li>
+                    </ul>
+                    <a href="../book-Appointment/index.html" class="block w-full text-center px-6 py-3 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800 transition-all duration-300">
+                        Book Three Areas
+                    </a>
+                </div>
+                
+                <!-- Additional Areas -->
+                <div class="bg-white rounded-2xl p-8 border-2 border-stone-100 hover:border-stone-900 transition-all duration-300">
+                    <div class="text-center mb-8">
+                        <h3 class="text-xl font-medium text-stone-900 mb-2">Additional Areas</h3>
+                        <div class="flex items-baseline justify-center gap-1">
+                            <span class="text-4xl font-medium tracking-tight text-stone-900">£95</span>
+                            <span class="text-stone-500">each</span>
+                        </div>
+                        <p class="text-sm text-stone-500 mt-2">For supplementary treatment areas</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-900 shrink-0"></i>
+                            <span>Bunny lines (nose)</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-900 shrink-0"></i>
+                            <span>Lip flip for gummy smile</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-900 shrink-0"></i>
+                            <span>Chin dimpling</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-stone-900 shrink-0"></i>
+                            <span>Neck bands (platysmal bands)</span>
+                        </li>
+                    </ul>
+                    <a href="../book-Appointment/index.html" class="block w-full text-center px-6 py-3 bg-white border border-stone-200 text-stone-700 text-sm font-medium rounded-full hover:bg-stone-50 transition-all duration-300">
+                        Book Consultation
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center text-sm text-stone-500">
+                <p>*All treatments include a complimentary 2-week follow-up to assess results. Maintenance treatments recommended every 3-4 months.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-stone-50 border-t border-stone-200">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-stone-500 font-light text-lg">Common questions about anti-wrinkle injections answered.</p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-xl p-6 border border-stone-100">
+                    <button class="faq-toggle w-full flex items-center justify-between text-left">
+                        <h3 class="text-lg font-medium text-stone-900">How long do results last?</h3>
+                        <i data-lucide="plus" class="w-5 h-5 text-stone-400 faq-icon"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-stone-500">Results typically last 3-4 months. With regular maintenance treatments, some patients find the effects can last longer as muscles become trained to relax. Dr. Mehta will create a personalised maintenance schedule based on your response to treatment.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-xl p-6 border border-stone-100">
+                    <button class="faq-toggle w-full flex items-center justify-between text-left">
+                        <h3 class="text-lg font-medium text-stone-900">Is the treatment painful?</h3>
+                        <i data-lucide="plus" class="w-5 h-5 text-stone-400 faq-icon"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-stone-500">Most patients experience minimal discomfort, often described as a quick pinch. Dr. Mehta uses ultra-fine needles and can apply topical numbing cream if requested. The entire process takes only 15-30 minutes, and any discomfort subsides immediately after treatment.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-xl p-6 border border-stone-100">
+                    <button class="faq-toggle w-full flex items-center justify-between text-left">
+                        <h3 class="text-lg font-medium text-stone-900">When will I see results?</h3>
+                        <i data-lucide="plus" class="w-5 h-5 text-stone-400 faq-icon"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-stone-500">Initial effects can be seen within 3-5 days, with full results visible after 10-14 days. The gradual onset ensures natural-looking changes. Dr. Mehta schedules a complimentary 2-week follow-up to assess your results and make any minor adjustments if needed.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-xl p-6 border border-stone-100">
+                    <button class="faq-toggle w-full flex items-center justify-between text-left">
+                        <h3 class="text-lg font-medium text-stone-900">Are there any side effects?</h3>
+                        <i data-lucide="plus" class="w-5 h-5 text-stone-400 faq-icon"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-stone-500">Common temporary side effects include mild redness, swelling, or bruising at injection sites, which typically resolve within hours to a few days. Serious complications are extremely rare when treated by a qualified medical professional like Dr. Mehta.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-xl p-6 border border-stone-100">
+                    <button class="faq-toggle w-full flex items-center justify-between text-left">
+                        <h3 class="text-lg font-medium text-stone-900">Who is not suitable for treatment?</h3>
+                        <i data-lucide="plus" class="w-5 h-5 text-stone-400 faq-icon"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-stone-500">Anti-wrinkle injections are not recommended for pregnant or breastfeeding women, individuals with certain neurological conditions, or those with allergies to any ingredients. During your consultation, Dr. Mehta will conduct a thorough medical assessment to ensure treatment is safe for you.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="../book-Appointment/index.html" class="inline-flex items-center gap-2 text-sm font-medium text-stone-900 border-b border-stone-200 hover:border-stone-900 pb-0.5 transition-all">
+                    Have more questions? Book a consultation
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="booking" class="py-24 bg-white border-t border-stone-200">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-6">Ready to Refresh Your Appearance?</h2>
+            <p class="text-lg text-stone-500 mb-10 leading-relaxed font-light max-w-2xl mx-auto">
+                Book a consultation with Dr. Mehta to discuss your anti-wrinkle treatment goals and create a personalised plan for natural-looking results.
+            </p>
+            <a href="../book-Appointment/index.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800 transition-all duration-300 shadow-lg shadow-stone-200">
+                Book Your Anti-Wrinkle Consultation
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <p class="text-sm text-stone-400 mt-6">
+                Consultation fee: £50 (redeemable against treatment)
+            </p>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <a id="floatingCTA" href="../book-Appointment/index.html" aria-label="Book Appointment"
+       class="fixed bottom-6 right-6 z-50 px-5 py-3 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800 transition-all duration-300 shadow-xl flex items-center justify-center gap-2">
+       <i data-lucide="calendar" class="w-4 h-4"></i>
+       Book Now
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-stone-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="col-span-2 md:col-span-1">
+                     <a href="index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2 mb-6">
+                        <span class="w-6 h-6 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-stone-900">
+                            <span class="font-medium text-[10px]">R</span>
+                        </span>
+                        RootsAesthetics
+                    </a>
+                    <p class="text-xs text-stone-500 leading-relaxed max-w-xs">
+                        Refining beauty through medical excellence. London based aesthetic clinic led by Dr. Anju Mehta.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Treatments</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="anti-wrinkle.html" class="hover:text-stone-900 transition-colors">Anti-Wrinkle</a></li>
+                        <li><a href="index.html#treatments" class="hover:text-stone-900 transition-colors">Dermal Fillers</a></li>
+                        <li><a href="index.html#treatments" class="hover:text-stone-900 transition-colors">Skin Boosters</a></li>
+                        <li><a href="index.html#treatments" class="hover:text-stone-900 transition-colors">Microneedling</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Clinic</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="index.html#about" class="hover:text-stone-900 transition-colors">About Dr. Mehta</a></li>
+                        <li><a href="../blog/index.html" class="hover:text-stone-900 transition-colors">Blog</a></li>
+                        <li><a href="results.html" class="hover:text-stone-900 transition-colors">Results Gallery</a></li>
+                        <li><a href="../book-Appointment/index.html" class="hover:text-stone-900 transition-colors">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Connect</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="#" class="hover:text-stone-900 transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-stone-900 transition-colors">LinkedIn</a></li>
+                        <li><a href="mailto:info@RootsAesthetics.co.uk" class="hover:text-stone-900 transition-colors">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-stone-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-stone-400">
+                    © 2023 Roots Aesthetics Ltd. All rights reserved. London, UK.
+                </p>
+                <div class="flex items-center gap-4">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-stone-300"></i>
+                    <span class="text-xs text-stone-400">GMC Registered Doctor</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile Menu Functionality
+        (function initMobileMenu() {
+            const btn = document.getElementById('mobileMenuButton');
+            const menu = document.getElementById('mobileMenu');
+            if (!btn || !menu) return;
+
+            const icons = Array.from(btn.querySelectorAll('svg, i'));
+            const [menuIcon, closeIcon] = icons;
+
+            btn.addEventListener('click', () => {
+                const isOpen = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('open');
+
+                if (menuIcon && closeIcon) {
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                }
+            });
+        })();
+        
+        // Before/After Comparison Functionality
+        (function initBeforeAfter() {
+            const groups = Array.from(document.querySelectorAll('.group.cursor-pointer'));
+            groups.forEach(group => {
+                const flexContainer = group.querySelector('.relative > .absolute.inset-0.flex');
+                if (!flexContainer) return;
+
+                const panes = Array.from(flexContainer.children).filter(c => c.tagName.toLowerCase() === 'div');
+                if (panes.length < 2) return;
+                const left = panes[0];
+                const right = panes[1];
+
+                left.classList.add('compare-left');
+                right.classList.add('compare-right');
+
+                const overlay = group.querySelector('.absolute.inset-0.flex.items-center.justify-center') || 
+                               group.querySelector('.absolute.inset-0.flex.items-center.justify-center.opacity-0');
+                if (overlay) overlay.classList.add('tap-overlay');
+
+                const handle = document.createElement('div');
+                handle.className = 'compare-handle';
+                flexContainer.appendChild(handle);
+
+                let containerRect = null;
+                
+                function updateHandlePosition(clientX) {
+                    if (!containerRect) containerRect = flexContainer.getBoundingClientRect();
+                    const x = Math.min(Math.max(clientX - containerRect.left, 0), containerRect.width);
+                    const pct = (x / containerRect.width) * 100;
+                    left.style.width = `${pct}%`;
+                    handle.style.left = `calc(${pct}% - 14px)`;
+                }
+
+                function initCenter() {
+                    left.style.width = '50%';
+                    handle.style.left = 'calc(50% - 14px)';
+                }
+                initCenter();
+
+                let dragging = false;
+                group.addEventListener('click', (e) => {
+                    if (dragging) return;
+                    if (e.target.closest('a')) return;
+                    group.classList.toggle('is-comparing');
+                    initCenter();
+                });
+
+                handle.addEventListener('pointerdown', (e) => {
+                    e.preventDefault();
+                    dragging = false;
+                    containerRect = flexContainer.getBoundingClientRect();
+                    handle.setPointerCapture(e.pointerId);
+                    const startX = e.clientX;
+                    
+                    const onMove = (ev) => {
+                        dragging = true;
+                        updateHandlePosition(ev.clientX);
+                    };
+                    
+                    const onUp = (ev) => {
+                        handle.releasePointerCapture && handle.releasePointerCapture(ev.pointerId);
+                        window.removeEventListener('pointermove', onMove);
+                        window.removeEventListener('pointerup', onUp);
+                        setTimeout(() => { dragging = false; }, 0);
+                    };
+                    
+                    window.addEventListener('pointermove', onMove);
+                    window.addEventListener('pointerup', onUp);
+                    group.classList.add('is-comparing');
+                });
+
+                window.addEventListener('resize', () => { 
+                    containerRect = null; 
+                    initCenter(); 
+                });
+            });
+        })();
+        
+        // FAQ Accordion Functionality
+        (function initFAQ() {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('.faq-icon');
+                    
+                    // Toggle current FAQ
+                    content.classList.toggle('hidden');
+                    
+                    // Change icon
+                    if (content.classList.contains('hidden')) {
+                        icon.setAttribute('data-lucide', 'plus');
+                    } else {
+                        icon.setAttribute('data-lucide', 'minus');
+                    }
+                    
+                    // Update icon
+                    lucide.createIcons();
+                });
+            });
+        })();
+        
+        // Simple intersection observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach((el) => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+
+</body></html>
